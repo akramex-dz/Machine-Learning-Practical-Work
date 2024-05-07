@@ -1,14 +1,9 @@
 import numpy as np
-#from sklearn.datasets import load_iris, load_breast_cancer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split,GridSearchCV
 from matplotlib import pyplot as plt
-#from matplotlib.colors import ListedColormap
-#from sklearn.metrics import confusion_matrix 
-#import seaborn as sns
-#import pandas as pd
 
 
 def plot_decision_boundary(X, y, X1, X2,classifier, plot_mean=True):
@@ -32,7 +27,6 @@ def plot_decision_boundary(X, y, X1, X2,classifier, plot_mean=True):
     return plt.show()
 
 def make_meshgrid(X, y, step):
-      #Make a meshgrid covering the range of X. This is used to display classification regions.
       X_set, y_set= X, y
       x_start, x_stop = X_set[:, 0].min() - 1, X_set[:, 0].max() + 1
       y_start, y_stop = X_set[:, 1].min() - 1, X_set[:, 1].max() + 1
